@@ -1,0 +1,134 @@
+/* css/animations.css — camada visual. Remover este arquivo não quebra o site. */
+
+/* ---------- Variáveis de tema ---------- */
+:root {
+    --bg: #0f172a; --fg: #e2e8f0; --muted: #94a3b8;
+    --accent: #6366f1; --accent-2: #ec4899;
+    --card: #1e293b; --border: rgba(148, 163, 184, .15);
+}
+:root[data-theme="light"] {
+    --bg: #f8fafc; --fg: #0f172a; --muted: #475569;
+    --card: #fff; --border: rgba(15, 23, 42, .1);
+}
+html, body {
+    background: var(--bg); color: var(--fg);
+    transition: background-color .3s ease, color .3s ease;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(15, 23, 42, .6);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+:root[data-theme="light"] .site-header { background: rgba(248, 250, 252, .7); }
+.site-header.is-scrolled { box-shadow: 0 8px 30px rgba(0,0,0,.15); }
+
+/* ---------- Barra de progresso ---------- */
+#scroll-progress {
+    position: fixed; inset: 0 0 auto 0; height: 3px;
+    transform: scaleX(0); transform-origin: left center;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    z-index: 100; pointer-events: none; will-change: transform;
+}
+
+/* ---------- Scroll reveal ---------- */
+[data-reveal] {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+    will-change: opacity, transform;
+}
+[data-reveal].is-visible { opacity: 1; transform: none; will-change: auto; }
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative; overflow: hidden; isolation: isolate;
+    background: linear-gradient(120deg, var(--bg), #1e293b, #312e81, var(--bg));
+    background-size: 300% 300%;
+    animation: gradientShift 20s ease infinite;
+}
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+}
+.hero > * { position: relative; z-index: 1; }
+.blob {
+    position: absolute; border-radius: 50%; filter: blur(80px);
+    opacity: .5; pointer-events: none; z-index: 0;
+    animation: float 14s ease-in-out infinite alternate;
+}
+.blob--accent   { background: var(--accent);   width: 420px; height: 420px; top: -120px; left: -80px; }
+.blob--accent-2 { background: var(--accent-2); width: 380px; height: 380px; bottom: -140px; right: -100px; animation-delay: -7s; }
+@keyframes float {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to   { transform: translate3d(30px,-40px,0) scale(1.15); }
+}
+
+/* ---------- Cards ---------- */
+.episode-card, .card {
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .3s ease;
+}
+.episode-card:hover, .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -20px rgba(99,102,241,.6);
+    border-color: rgba(99,102,241,.4);
+}
+
+/* ---------- Player ---------- */
+.player {
+    display: flex; align-items: center; gap: .75rem;
+    padding: .5rem .75rem; background: var(--card);
+    border: 1px solid var(--border); border-radius: 999px;
+}
+.player [data-play] {
+    width: 40px; height: 40px; border-radius: 50%; border: none;
+    background: var(--accent); color: #fff; cursor: pointer;
+    display: grid; place-items: center;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.player [data-play]:hover { transform: scale(1.08); }
+.player [data-play][data-state="playing"] { background: var(--accent-2); }
+.player [data-play]::before {
+    content: ""; width: 0; height: 0; border-style: solid;
+    border-width: 7px 0 7px 11px;
+    border-color: transparent transparent transparent #fff; margin-left: 2px;
+}
+.player [data-play][data-state="playing"]::before {
+    width: 10px; height: 12px; border: none; margin-left: 0;
+    background: linear-gradient(to right, #fff 0 35%, transparent 35% 65%, #fff 65% 100%);
+}
+.player [data-track] {
+    flex: 1; height: 6px; background: var(--border);
+    border-radius: 999px; overflow: hidden; cursor: pointer; position: relative;
+}
+.player [data-progress] {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform .1s linear;
+}
+.player [data-time] {
+    font-variant-numeric: tabular-nums; font-size: .8rem;
+    color: var(--muted); min-width: 80px; text-align: right;
+}
+
+/* ---------- Botão de tema ---------- */
+#theme-toggle {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--fg); border-radius: 999px; padding: .4rem .8rem;
+    cursor: pointer; font-size: .85rem;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+#theme-toggle:hover { border-color: var(--accent); background: rgba(99,102,241,.1); }
+
+/* ---------- Acessibilidade ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+    [data-reveal] { opacity: 1; transform: none; }
+    .hero, .blob { animation: none; }
+}
