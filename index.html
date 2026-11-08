@@ -12,14 +12,36 @@
 </head>
 <body>
 
-<header class="hero">
+<header class="site-header">
+    <div id="scroll-progress"></div>
+    <div class="container nav-container">
+        <a href="#inicio" class="nav-logo">
+            <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
+        </a>
+
+        <nav id="site-nav">
+            <a href="#inicio">Início</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#apresentadores">Apresentadores</a>
+            <a href="#episodios">Episódios</a>
+            <a href="#convidados">Convidados</a>
+            <a href="#parceiros">Parceiros</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
     <div class="container">
         <img src="assets/trad-logo.png" alt="Logo Quinta Podcast" class="logo">
         <h1>O papo de boteco do mundo Geek e Otaku!</h1>
         <p>Apresentado por Felipe "Nero" e Nando "Colecionando"</p>
         <a href="#contato" class="btn-primary">Seja um Parceiro</a>
     </div>
-</header>
+</section>
 
 <section class="sobre container">
     <h2>Quem Somos</h2>

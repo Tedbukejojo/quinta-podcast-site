@@ -281,3 +281,64 @@ footer p {
         max-height: 50px;
     }
 }
+/* =========================================
+   HEADER / NAVEGAÇÃO EM ABAS
+   ========================================= */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.nav-logo img {
+    height: 45px;
+}
+
+#site-nav {
+    display: flex;
+    gap: 25px;
+}
+
+#site-nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+#site-nav a:hover {
+    color: var(--laranja-marca);
+}
+
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #site-nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--azul-escuro);
+        padding: 20px;
+    }
+
+    #site-nav.is-open {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+}
