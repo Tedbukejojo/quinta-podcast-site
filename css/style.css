@@ -55,16 +55,19 @@ h2 {
 }
 
 /* =========================================
-   HEADER / NAVEGAÇÃO EM ABAS
+   HEADER / NAVEGAÇÃO EM ABAS (Corrigido)
    ========================================= */
 .site-header {
-    background-color: var(--azul-escuro);
+    background-color: var(--azul-escuro) !important; /* Força o fundo azul */
     position: sticky;
     top: 0;
     z-index: 50;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Sombra para destacar do fundo */
 }
 
 .nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,7 +84,7 @@ h2 {
 }
 
 #site-nav a {
-    color: var(--branco);
+    color: var(--branco) !important; /* Força a letra branca */
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95rem;
@@ -89,18 +92,19 @@ h2 {
 }
 
 #site-nav a:hover {
-    color: var(--laranja-marca);
+    color: var(--laranja-marca) !important; /* Laranja ao passar o mouse */
 }
 
 #nav-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--branco);
+    color: var(--branco) !important;
     font-size: 1.8rem;
     cursor: pointer;
 }
 
+/* Menu Mobile */
 @media (max-width: 768px) {
     #site-nav {
         display: none;
@@ -110,8 +114,9 @@ h2 {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--azul-escuro);
+        background: var(--azul-escuro) !important;
         padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     #site-nav.is-open {
