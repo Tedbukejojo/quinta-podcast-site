@@ -29,7 +29,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Rolagem suave ao clicar no botão */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -55,235 +55,15 @@ h2 {
 }
 
 /* =========================================
-   HERO SECTION (Topo)
-   ========================================= */
-.hero {
-    background-color: var(--azul-escuro);
-    background-image: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-marca) 100%);
-    color: var(--branco);
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero .logo {
-    max-width: 250px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-family: var(--fonte-titulo);
-    font-size: 3.5rem;
-    color: var(--branco);
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.btn-primary {
-    background-color: var(--laranja-marca);
-    color: var(--branco);
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    border-radius: 50px;
-    display: inline-block;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(242, 121, 0, 0.4);
-}
-
-.btn-primary:hover {
-    background-color: var(--laranja-hover);
-    transform: translateY(-3px);
-}
-
-/* =========================================
-   SEÇÃO QUEM SOMOS (Corrigida)
-   ========================================= */
-.sobre {
-    background-color: var(--branco);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    margin-top: -40px; /* Efeito de caixa flutuante */
-    position: relative;
-    z-index: 10;
-}
-
-.sobre h2 {
-    color: var(--azul-marca);
-}
-
-.sobre p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    text-align: justify;
-    color: var(--cinza-texto) !important; /* O !important força a cor escura e resolve o bug da tela branca */
-}
-
-.sobre strong {
-    color: var(--azul-escuro);
-    font-weight: bold;
-}
-
-/* =========================================
-   INSIGHTS (Números)
-   ========================================= */
-.insights {
-    background-color: var(--azul-marca);
-    padding: 40px 0;
-}
-
-.grid-insights {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: var(--branco);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    flex: 1;
-    min-width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--laranja-marca);
-}
-
-.card h3 {
-    color: var(--azul-marca);
-    font-size: 2.5rem;
-    font-family: var(--fonte-titulo);
-    margin-bottom: 5px;
-}
-
-.card p {
-    color: var(--cinza-texto);
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-
-/* =========================================
-   CONVIDADOS
-   ========================================= */
-.convidados {
-    background-color: var(--branco);
-}
-
-.grid-convidados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.convidado-card {
-    background: var(--cinza-fundo);
-    color: var(--cinza-texto);
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 6px solid var(--laranja-marca);
-    transition: 0.3s;
-}
-
-.convidado-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.convidado-card h4 {
-    color: var(--azul-marca);
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-}
-
-.convidado-card p {
-    font-size: 0.9rem;
-}
-
-/* =========================================
-   PARCEIROS
-   ========================================= */
-.parceiros {
-    background-color: var(--cinza-fundo);
-    text-align: center;
-    border-top: 1px solid var(--cinza-claro);
-    border-bottom: 1px solid var(--cinza-claro);
-}
-
-.logos-parceiros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    filter: grayscale(100%); /* Deixa os logos cinzas para ficarem harmoniosos */
-    transition: 0.3s;
-}
-
-.logos-parceiros:hover {
-    filter: grayscale(0%); /* Coloridos ao passar o mouse */
-}
-
-.logos-parceiros img {
-    max-height: 70px; /* Altura máxima para padronizar */
-    max-width: 180px; /* Largura máxima */
-    object-fit: contain; /* Impede que o logo fique esticado ou achatado */
-}
-
-/* =========================================
-   FOOTER / CONTATO
-   ========================================= */
-footer {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    text-align: center;
-    padding-bottom: 40px;
-}
-
-footer h2 {
-    color: var(--branco);
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* =========================================
-   RESPONSIVIDADE (Celulares)
-   ========================================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .sobre {
-        margin-top: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .logos-parceiros {
-        gap: 20px;
-    }
-
-    .logos-parceiros img {
-        max-height: 50px;
-    }
-}
-/* =========================================
    HEADER / NAVEGAÇÃO EM ABAS
    ========================================= */
+.site-header {
+    background-color: var(--azul-escuro);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -342,6 +122,123 @@ footer p {
         display: block;
     }
 }
+
+/* =========================================
+   HERO SECTION (Topo)
+   ========================================= */
+.hero {
+    background-color: var(--azul-escuro);
+    background-image: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-marca) 100%);
+    color: var(--branco);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero .logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    color: var(--branco);
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--laranja-marca);
+    color: var(--branco);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(242, 121, 0, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: var(--laranja-hover);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   SEÇÃO QUEM SOMOS
+   ========================================= */
+.sobre {
+    background-color: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+}
+
+.sobre h2 {
+    color: var(--azul-marca);
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: var(--cinza-texto) !important;
+}
+
+.sobre strong {
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+/* =========================================
+   INSIGHTS (Números)
+   ========================================= */
+.insights {
+    background-color: var(--azul-marca);
+    padding: 40px 0;
+}
+
+.grid-insights {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--laranja-marca);
+}
+
+.card h3 {
+    color: var(--azul-marca);
+    font-size: 2.5rem;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: var(--cinza-texto);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
 /* =========================================
    EPISÓDIOS (YouTube)
    ========================================= */
@@ -488,8 +385,34 @@ footer p {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+/* =========================================
+   CONVIDADOS
+   ========================================= */
+.convidados {
+    background-color: var(--branco);
+}
+
+.grid-convidados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
 .convidado-card {
+    background: var(--cinza-fundo);
+    color: var(--cinza-texto);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 6px solid var(--laranja-marca);
+    transition: 0.3s;
     text-align: center;
+}
+
+.convidado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .convidado-foto {
@@ -501,4 +424,88 @@ footer p {
     display: block;
     border: 3px solid var(--laranja-marca);
     background: var(--cinza-claro);
+}
+
+.convidado-card h4 {
+    color: var(--azul-marca);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.convidado-card p {
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   PARCEIROS
+   ========================================= */
+.parceiros {
+    background-color: var(--cinza-fundo);
+    text-align: center;
+    border-top: 1px solid var(--cinza-claro);
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.logos-parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.logos-parceiros:hover {
+    filter: grayscale(0%);
+}
+
+.logos-parceiros img {
+    max-height: 70px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* =========================================
+   FOOTER / CONTATO
+   ========================================= */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+footer h2 {
+    color: var(--branco);
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .sobre {
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .logos-parceiros {
+        gap: 20px;
+    }
+
+    .logos-parceiros img {
+        max-height: 50px;
+    }
 }
