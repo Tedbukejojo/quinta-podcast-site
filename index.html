@@ -4,51 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quinta Podcast - O Papo de Boteco do Mundo Geek</title>
+    <meta name="description" content="O Quinta Podcast é um espaço descontraído dedicado ao universo geek e otaku, apresentado por Felipe Nero e Nando Colecionando.">
 
-    <!-- ISSO AQUI É O QUE CHAMA O CSS -->
+    <!-- Link para o CSS (Caminho corrigido para a pasta css) -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
-    <div id="scroll-progress"></div>
-    <div class="container nav-container">
-        <a href="#inicio" class="nav-logo">
-            <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
-        </a>
-
-        <nav id="site-nav">
-            <a href="#inicio">Início</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#apresentadores">Apresentadores</a>
-            <a href="#episodios">Episódios</a>
-            <a href="#convidados">Convidados</a>
-            <a href="#parceiros">Parceiros</a>
-            <a href="#eventos">Eventos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    </div>
-</header>
-
-<section class="hero" id="inicio">
+<!-- HERO SECTION (Topo) -->
+<header class="hero">
     <div class="container">
+        <!-- Certifique-se de que o logo principal está na pasta assets -->
         <img src="assets/trad-logo.png" alt="Logo Quinta Podcast" class="logo">
         <h1>O papo de boteco do mundo Geek e Otaku!</h1>
         <p>Apresentado por Felipe "Nero" e Nando "Colecionando"</p>
         <a href="#contato" class="btn-primary">Seja um Parceiro</a>
     </div>
-</section>
+</header>
 
-<section class="sobre container" id="quem-somos">
+<!-- SEÇÃO QUEM SOMOS -->
+<section class="sobre container">
     <h2>Quem Somos</h2>
     <p>O Quinta Podcast é um espaço leve e descontraído dedicado ao universo geek e otaku. Nosso estilo é o de um verdadeiro “papo de boteco”, sempre recheado de referências, boas risadas e convidados especiais que compartilham suas histórias e vivências.</p>
     <p>Criado em 2023, o projeto nasceu com transmissões ao vivo e, com o crescimento da comunidade, evoluiu para gravações presenciais realizadas no <strong>Akiba Station</strong>, um dos pontos mais icônicos da cultura geek em São Paulo.</p>
 </section>
 
+<!-- SEÇÃO INSIGHTS (Números) -->
 <section class="insights">
     <div class="container grid-insights">
         <div class="card">
@@ -66,16 +52,53 @@
     </div>
 </section>
 
-<section class="episodios container" id="episodios">
+<!-- SEÇÃO ÚLTIMOS EPISÓDIOS (Aqui o JS vai injetar os vídeos) -->
+<section class="episodios container">
     <h2>Últimos Episódios</h2>
     <div id="episodios-grid" class="grid-episodios">
-        <p class="episodios-loading">Carregando episódios...</p>
+        <p class="loading">Carregando episódios...</p>
     </div>
 </section>
 
-<section class="convidados container" id="convidados">
+<!-- SEÇÃO CONVIDADOS (Aqui o JS vai injetar os cards) -->
+<section class="convidados container">
     <h2>Quem já passou pelo Quinta</h2>
-    <div id="convidados-grid" class="grid-convidados"></div>
+    <!-- O ID abaixo é fundamental para o convidados.js funcionar -->
+    <div id="convidados-grid" class="grid-convidados">
+        <!-- Os cards serão inseridos aqui via JavaScript -->
+    </div>
 </section>
 
-<
+<!-- SEÇÃO PARCEIROS -->
+<section class="parceiros">
+    <div class="container">
+        <h2>Nossos Parceiros</h2>
+        <div class="logos-parceiros">
+            <!-- Caminhos corrigidos baseados na sua estrutura de pastas -->
+            <img src="assets/parceiroslogo/logo-Akiba.PNG" alt="Akiba Station">
+            <img src="assets/parceiroslogo/Logo-ANIMEX.png" alt="Animex">
+            <img src="assets/parceiroslogo/logo-Medieval.png" alt="Lenda Medieval">
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER / CONTATO -->
+<footer id="contato">
+    <div class="container">
+        <h2>Vamos fechar uma parceria?</h2>
+
+        <!-- WhatsApp removido, e-mail genérico adicionado -->
+        <p>Entre em contato pelo e-mail: <strong>contato@quintapodcast.com.br</strong> <em>(Exemplo)</em></p>
+
+        <a href="https://instagram.com/quinta_podcast" target="_blank" class="btn-primary">Siga @quinta_podcast</a>
+    </div>
+</footer>
+
+<!-- ========================================== -->
+<!-- SCRIPTS DO PROJETO (Fundamentais para o JS rodar) -->
+<!-- ========================================== -->
+<script src="js/convidados.js"></script>
+<script src="js/episodios.js"></script>
+
+</body>
+</html>

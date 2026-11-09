@@ -1,7 +1,4 @@
 // js/convidados.js — lista de convidados do Quinta Podcast
-// Pra adicionar um novo convidado: copie um bloco { ... } e preencha.
-// foto: nome do arquivo dentro de assets/convidados/ (se não existir ainda, cai no placeholder automaticamente)
-
 const CONVIDADOS = [
     { nome: "Alfredo Rollo", papel: "Dublador: Vegeta, Lucifer e Brook", foto: "alfredo-rollo.jpg" },
     { nome: "Bárbara Gutierrez", papel: "Apresentadora e E-sports", foto: "barbara-gutierrez.jpg" },
