@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Quinta Podcast</title>
+    <meta name="description" content="Acompanhe os próximos eventos, feiras e gravações ao vivo do Quinta Podcast.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER / MENU DE NAVEGAÇÃO -->
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
+        </a>
+        <button id="nav-toggle" aria-label="Abrir menu">☰</button>
+        <nav id="site-nav">
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <a href="index.html#episodios">Episódios</a>
+            <a href="convidados.html">Convidados</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- SEÇÃO EVENTOS -->
+    <section class="container eventos-container" style="padding-top: 40px;">
+        <h2>Agenda do Quinta</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: var(--cinza-texto);">
+            Fique de olho onde estaremos gravando ou marcando presença!
+        </p>
+
+        <!-- Card de Evento 1 -->
+        <div class="evento-card">
+            <!-- Imagem ilustrativa (pode trocar pelo flyer oficial do evento) -->
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Evento Geek" class="evento-imagem">
+            <div class="evento-info">
+                <span class="evento-data"><i class="far fa-calendar-alt"></i> 15 de Dezembro de 2025</span>
+                <h3>Gravação ao Vivo no Akiba Station</h3>
+                <p class="evento-local"><i class="fas fa-map-marker-alt" style="color: var(--laranja-marca);"></i> Akiba Station - São Paulo, SP</p>
+                <p class="evento-descricao">Venha participar de mais um episódio gravado ao vivo com a presença de convidados especiais, sessão de autógrafos e muitas surpresas para a comunidade geek.</p>
+                <a href="#" class="btn-primary btn-small">Garantir Ingresso</a>
+            </div>
+        </div>
+
+        <!-- Card de Evento 2 -->
+        <div class="evento-card">
+            <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=600&h=400&fit=crop" alt="Anime Friends" class="evento-imagem">
+            <div class="evento-info">
+                <span class="evento-data"><i class="far fa-calendar-alt"></i> 20 de Julho de 2026</span>
+                <h3>Painel no Anime Friends</h3>
+                <p class="evento-local"><i class="fas fa-map-marker-alt" style="color: var(--laranja-marca);"></i> São Paulo Expo - São Paulo, SP</p>
+                <p class="evento-descricao">Felipe "Nero" e Nando "Colecionando" estarão no palco principal do Anime Friends para um bate-papo imperdível sobre o universo otaku e os bastidores do podcast.</p>
+                <a href="#" class="btn-primary btn-small">Mais Informações</a>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER / CONTATO -->
+<footer id="contato">
+    <div class="container">
+        <h2>Vamos fechar uma parceria?</h2>
+        <p>Entre em contato pelo e-mail: <strong>contato@quintapodcast.com.br</strong> <em>(Exemplo)</em></p>
+
+        <div class="social-links">
+            <a href="https://www.youtube.com/@quintapodcast" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/show/SEU_LINK_AQUI" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com/quinta_podcast" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p class="dev-credit">Site em desenvolvimento por <strong>Joice Generich</strong></p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('site-nav').classList.toggle('is-open');
+    });
+</script>
+</body>
+</html>

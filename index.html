@@ -4,51 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quinta Podcast - O Papo de Boteco do Mundo Geek</title>
+    <meta name="description" content="O Quinta Podcast é um espaço descontraído dedicado ao universo geek, apresentado por Felipe Nero e Nando Colecionando.">
 
-    <!-- ISSO AQUI É O QUE CHAMA O CSS -->
+    <!-- Link para o CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- HEADER / MENU DE NAVEGAÇÃO -->
 <header class="site-header">
-    <div id="scroll-progress"></div>
-    <div class="container nav-container">
-        <a href="#inicio" class="nav-logo">
+    <div class="nav-container">
+        <!-- Logo na ponta esquerda -->
+        <a href="index.html" class="nav-logo">
             <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
         </a>
 
-        <nav id="site-nav">
-            <a href="#inicio">Início</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#apresentadores">Apresentadores</a>
-            <a href="#episodios">Episódios</a>
-            <a href="#convidados">Convidados</a>
-            <a href="#parceiros">Parceiros</a>
-            <a href="#eventos">Eventos</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <!-- Botão do menu mobile -->
+        <button id="nav-toggle" aria-label="Abrir menu">☰</button>
 
-        <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <!-- Links do Menu com as letras laranjas -->
+        <nav id="site-nav">
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <a href="index.html#episodios">Episódios</a>
+            <a href="convidados.html">Convidados</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
     </div>
 </header>
 
-<section class="hero" id="inicio">
+<!-- HERO SECTION (Topo) -->
+<header class="hero">
     <div class="container">
         <img src="assets/trad-logo.png" alt="Logo Quinta Podcast" class="logo">
         <h1>O papo de boteco do mundo Geek e Otaku!</h1>
         <p>Apresentado por Felipe "Nero" e Nando "Colecionando"</p>
         <a href="#contato" class="btn-primary">Seja um Parceiro</a>
     </div>
-</section>
+</header>
 
-<section class="sobre container" id="quem-somos">
+<!-- SEÇÃO QUEM SOMOS -->
+<!-- Adicionado o ID para o menu funcionar -->
+<section id="quem-somos" class="sobre container">
     <h2>Quem Somos</h2>
     <p>O Quinta Podcast é um espaço leve e descontraído dedicado ao universo geek e otaku. Nosso estilo é o de um verdadeiro “papo de boteco”, sempre recheado de referências, boas risadas e convidados especiais que compartilham suas histórias e vivências.</p>
     <p>Criado em 2023, o projeto nasceu com transmissões ao vivo e, com o crescimento da comunidade, evoluiu para gravações presenciais realizadas no <strong>Akiba Station</strong>, um dos pontos mais icônicos da cultura geek em São Paulo.</p>
 </section>
 
+<!-- SEÇÃO INSIGHTS (Números) -->
 <section class="insights">
     <div class="container grid-insights">
         <div class="card">
@@ -66,16 +77,74 @@
     </div>
 </section>
 
-<section class="episodios container" id="episodios">
+<!-- SEÇÃO ÚLTIMOS EPISÓDIOS -->
+<!-- Adicionado o ID para o menu funcionar -->
+<section id="episodios" class="episodios container">
     <h2>Últimos Episódios</h2>
     <div id="episodios-grid" class="grid-episodios">
-        <p class="episodios-loading">Carregando episódios...</p>
+        <p class="loading">Carregando episódios...</p>
     </div>
 </section>
 
-<section class="convidados container" id="convidados">
+<!-- SEÇÃO CONVIDADOS -->
+<section class="convidados container">
     <h2>Quem já passou pelo Quinta</h2>
-    <div id="convidados-grid" class="grid-convidados"></div>
+    <div id="convidados-grid" class="grid-convidados">
+        <!-- Os cards serão inseridos aqui via JavaScript -->
+    </div>
+    <!-- Botão para ver a lista completa -->
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="convidados.html" class="btn-primary">Ver todos os convidados</a>
+    </div>
 </section>
 
-<
+<!-- SEÇÃO PARCEIROS -->
+<section class="parceiros">
+    <div class="container">
+        <h2>Nossos Parceiros</h2>
+        <div class="logos-parceiros">
+            <img src="assets/parceiroslogo/logo-Akiba.PNG" alt="Akiba Station">
+            <img src="assets/parceiroslogo/Logo-ANIMEX.png" alt="Animex">
+            <img src="assets/parceiroslogo/logo-Medieval.png" alt="Lenda Medieval">
+        </div>
+        <!-- Botão para ver a página de parceiros -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="parceiros.html" class="btn-primary">Conheça nossos parceiros</a>
+        </div>
+    </div>
+</section>
+
+<!-- Adicionado o ID para o menu funcionar -->
+<!-- FOOTER / CONTATO -->
+<footer id="contato">
+    <div class="container">
+        <h2>Vamos fechar uma parceria?</h2>
+        <p>Entre em contato pelo e-mail: <strong>contato@quintapodcast.com.br</strong> <em>(Exemplo)</em></p>
+
+        <!-- Redes Sociais -->
+        <div class="social-links">
+            <a href="https://www.youtube.com/@quintapodcast" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/show/0TIARQPdFY01JMWp8NUaEl?si=fa030650981b4e56" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com/quinta_podcast" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Créditos do Desenvolvedor -->
+        <p class="dev-credit">Site em desenvolvimento por <strong>Joice Generich</strong></p>
+    </div>
+</footer>
+
+<!-- ========================================== -->
+<!-- SCRIPTS DO PROJETO -->
+<!-- ========================================== -->
+<script src="js/convidados.js"></script>
+<script src="js/episodios.js"></script>
+
+<!-- Script para o menu mobile abrir e fechar -->
+<script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('site-nav').classList.toggle('is-open');
+    });
+</script>
+
+</body>
+</html>
