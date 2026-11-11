@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quinta Podcast - O Papo de Boteco do Mundo Geek</title>
-    <meta name="description" content="O Quinta Podcast é um espaço descontraído dedicado ao universo geek e otaku, apresentado por Felipe Nero e Nando Colecionando.">
+    <meta name="description" content="O Quinta Podcast é um espaço descontraído dedicado ao universo geek, apresentado por Felipe Nero e Nando Colecionando.">
 
     <!-- Link para o CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -13,25 +13,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER / NAVEGAÇÃO -->
+<!-- HEADER / MENU DE NAVEGAÇÃO -->
 <header class="site-header">
     <div class="nav-container">
+        <!-- Logo na ponta esquerda -->
         <a href="index.html" class="nav-logo">
-            <img src="assets/trad-logo.png" alt="Quinta Podcast">
+            <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
         </a>
+
+        <!-- Botão do menu mobile -->
         <button id="nav-toggle" aria-label="Abrir menu">☰</button>
+
+        <!-- Links do Menu com as letras laranjas -->
         <nav id="site-nav">
             <a href="index.html">Início</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#episodios">Episódios</a>
-            <!-- Links para as novas páginas -->
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <a href="index.html#episodios">Episódios</a>
             <a href="convidados.html">Convidados</a>
             <a href="parceiros.html">Parceiros</a>
             <a href="eventos.html">Eventos</a>
-            <a href="#contato">Contato</a>
+            <a href="index.html#contato">Contato</a>
         </nav>
     </div>
 </header>
@@ -109,13 +114,22 @@
     </div>
 </section>
 
-<!-- FOOTER / CONTATO -->
 <!-- Adicionado o ID para o menu funcionar -->
+<!-- FOOTER / CONTATO -->
 <footer id="contato">
     <div class="container">
         <h2>Vamos fechar uma parceria?</h2>
         <p>Entre em contato pelo e-mail: <strong>contato@quintapodcast.com.br</strong> <em>(Exemplo)</em></p>
-        <a href="https://instagram.com/quinta_podcast" target="_blank" class="btn-primary">Siga @quinta_podcast</a>
+
+        <!-- Redes Sociais -->
+        <div class="social-links">
+            <a href="https://www.youtube.com/@quintapodcast" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/show/0TIARQPdFY01JMWp8NUaEl?si=fa030650981b4e56" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com/quinta_podcast" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Créditos do Desenvolvedor -->
+        <p class="dev-credit">Site em desenvolvimento por <strong>Joice Generich</strong></p>
     </div>
 </footer>
 
