@@ -207,16 +207,34 @@ h2 {
 .video-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--branco); font-size: 1.5rem; cursor: pointer; }
 
 /* =========================================
-   CONVIDADOS
+   CONVIDADOS (MODIFICADO AQUI)
    ========================================= */
 .convidados { background-color: var(--branco); }
 .grid-convidados { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
 .convidado-card {
-    background: var(--cinza-fundo); color: var(--cinza-texto); padding: 25px; border-radius: 8px;
-    border-left: 6px solid var(--laranja-marca); transition: 0.3s; text-align: center;
+    background: var(--cinza-fundo);
+    color: var(--cinza-texto);
+    padding: 30px 20px; /* Aumentei o padding para acomodar a foto maior */
+    border-radius: 8px;
+    border-left: 6px solid var(--laranja-marca);
+    transition: 0.3s;
+    text-align: center;
 }
 .convidado-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-.convidado-foto { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; display: block; border: 3px solid var(--laranja-marca); background: var(--cinza-claro); }
+
+/* Foto maior e mais visível */
+.convidado-foto {
+    width: 140px; /* Aumentado de 90px para 140px */
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 4px solid var(--laranja-marca); /* Borda mais grossa */
+    background: var(--cinza-claro);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra na foto */
+}
+
 .convidado-card h4 { color: var(--azul-marca); font-size: 1.2rem; margin-bottom: 8px; }
 .convidado-card p { font-size: 0.9rem; }
 
@@ -267,4 +285,10 @@ footer p { font-size: 1.2rem; margin-bottom: 30px; }
     .sobre { margin-top: 0; border-radius: 0; box-shadow: none; }
     .logos-parceiros { gap: 20px; }
     .logos-parceiros img { max-height: 50px; }
+
+    /* Ajuste para a foto não quebrar no celular */
+    .convidado-foto {
+        width: 110px;
+        height: 110px;
+    }
 }
