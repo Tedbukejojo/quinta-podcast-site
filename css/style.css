@@ -292,3 +292,102 @@ footer p { font-size: 1.2rem; margin-bottom: 30px; }
         height: 110px;
     }
 }
+/* =========================================
+   PÁGINA DE PARCEIROS DETALHADA
+   ========================================= */
+.parceiros-page {
+    padding-top: 40px;
+}
+
+.parceiro-card {
+    background: var(--branco);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.parceiro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 768px) {
+    .parceiro-card {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Área do Logo do Parceiro */
+.parceiro-logo-box {
+    background: var(--azul-escuro);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .parceiro-logo-box {
+        width: 35%;
+        min-height: 100%;
+    }
+}
+
+.parceiro-logo-box img {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.parceiro-card:hover .parceiro-logo-box img {
+    transform: scale(1.1) rotate(-3deg); /* Efeito divertido ao passar o mouse */
+}
+
+/* Área de Texto */
+.parceiro-info {
+    padding: 30px;
+    flex: 1;
+}
+
+.parceiro-info h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--azul-marca);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parceiro-tag {
+    background: var(--laranja-marca);
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.parceiro-info p {
+    font-size: 1.05rem;
+    color: var(--cinza-texto);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.parceiro-info .btn-primary {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+}

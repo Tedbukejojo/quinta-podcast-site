@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros - Quinta Podcast</title>
+    <meta name="description" content="Conheça as marcas e lojas que apoiam e caminham junto com o Quinta Podcast.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER / MENU DE NAVEGAÇÃO -->
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/trad-logo.png" alt="Logo Quinta Podcast">
+        </a>
+        <button id="nav-toggle" aria-label="Abrir menu">☰</button>
+        <nav id="site-nav">
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <a href="index.html#episodios">Episódios</a>
+            <a href="convidados.html">Convidados</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- SEÇÃO PARCEIROS -->
+    <section class="container parceiros-page">
+        <h2>Quem apoia o Quinta</h2>
+        <p style="text-align: center; margin-bottom: 50px; color: var(--cinza-texto); font-size: 1.1rem;">
+            Nossos parceiros são essenciais para manter o "papo de boteco" no ar. <br>
+            Conheça as marcas que respiram a cultura geek tanto quanto a gente!
+        </p>
+
+        <!-- PARCEIRO 1 -->
+        <div class="parceiro-card">
+            <div class="parceiro-logo-box">
+                <img src="assets/parceiroslogo/logo-Akiba.PNG" alt="Akiba Station">
+            </div>
+            <div class="parceiro-info">
+                <h3>Akiba Station <span class="parceiro-tag">Nosso QG</span></h3>
+                <p>O Akiba Station é mais do que uma loja, é um ponto de encontro para os fãs da cultura pop japonesa. É lá que o Quinta Podcast grava seus episódios presenciais, cercado por action figures, mangás e muita energia otaku. Se você procura um lugar para chamar de seu, esse é o lugar!</p>
+                <a href="#" class="btn-primary" target="_blank">Visitar Loja</a>
+            </div>
+        </div>
+
+        <!-- PARCEIRO 2 -->
+        <div class="parceiro-card">
+            <div class="parceiro-logo-box">
+                <img src="assets/parceiroslogo/Logo-ANIMEX.png" alt="Animex">
+            </div>
+            <div class="parceiro-info">
+                <h3>Animex <span class="parceiro-tag">Colecionáveis</span></h3>
+                <p>A Animex é a loja definitiva para os colecionadores e otakus de plantão. Com uma variedade impressionante de produtos, eles são os parceiros oficiais quando o assunto é unboxing e reviews de novidades. Tudo o que você precisa para a sua estante está lá!</p>
+                <a href="#" class="btn-primary" target="_blank">Ver Novidades</a>
+            </div>
+        </div>
+
+        <!-- PARCEIRO 3 -->
+        <div class="parceiro-card">
+            <div class="parceiro-logo-box">
+                <img src="assets/parceiroslogo/logo-Medieval.png" alt="Lenda Medieval">
+            </div>
+            <div class="parceiro-info">
+                <h3>Lenda Medieval <span class="parceiro-tag">Fantasia & RPG</span></h3>
+                <p>Para os amantes de RPG, espadas e fantasia medieval, a Lenda Medieval é a parada obrigatória. Nossos patrocinadores de escudos e poções mágicas! Eles apoiam o Quinta trazendo aquele toque épico que todo bom geek adora.</p>
+                <a href="#" class="btn-primary" target="_blank">Explorar Reino</a>
+            </div>
+        </div>
+
+        <!-- AVISO PARA O CLIENTE -->
+        <div style="text-align: center; margin-top: 50px; padding: 20px; background: var(--cinza-claro); border-radius: 8px;">
+            <p style="font-size: 0.9rem; color: var(--cinza-texto);">
+                <i class="fas fa-info-circle" style="color: var(--laranja-marca);"></i>
+                <strong>Área do Desenvolvedor:</strong> Substitua os textos acima pelos resumos reais enviados pelo cliente e adicione os links corretos nos botões.
+            </p>
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER / CONTATO -->
+<footer id="contato">
+    <div class="container">
+        <h2>Vamos fechar uma parceria?</h2>
+        <p>Entre em contato pelo e-mail: <strong>contato@quintapodcast.com.br</strong> <em>(Exemplo)</em></p>
+
+        <div class="social-links">
+            <a href="https://www.youtube.com/@quintapodcast" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/show/SEU_LINK_AQUI" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com/quinta_podcast" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p class="dev-credit">Site em desenvolvimento por <strong>Joice Generich</strong></p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('site-nav').classList.toggle('is-open');
+    });
+</script>
+</body>
+</html>
